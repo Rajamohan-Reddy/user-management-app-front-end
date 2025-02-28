@@ -11,7 +11,7 @@ class UserList extends Component {
   }
 
   getUsersList = async () => {
-    const url = "http://localhost:3000/users";
+    const url = "https://user-management-app-backend-6.onrender.com/users";
     const options = {
       method: "GET",
     };
@@ -28,7 +28,7 @@ class UserList extends Component {
     const { usersList } = this.state;
     const filteredList = usersList.filter((eachUser) => eachUser.id !== id);
     this.setState({ usersList: filteredList });
-    const url = `http://localhost:3000/users/${id}`;
+    const url = `https://user-management-app-backend-6.onrender.com/users/${id}`;
     const options = {
       method: "DELETE",
       headers: {

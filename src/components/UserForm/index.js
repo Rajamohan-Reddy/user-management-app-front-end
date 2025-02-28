@@ -87,7 +87,7 @@ class UserForm extends Component {
   }
 
   getEditableUserResponse = async (userid) => {
-    const url = `http://localhost:3000/users/${userid}`;
+    const url = `https://user-management-app-backend-6.onrender.com/users/${userid}`;
     const options = {
       method: "GET",
     };
@@ -131,8 +131,8 @@ class UserForm extends Component {
       };
       const requestMethod = isEditMode ? "PUT" : "POST";
       const url = isEditMode
-        ? `http://localhost:3000/users/${id}`
-        : "http://localhost:3000/users";
+        ? `https://user-management-app-backend-6.onrender.com/users/${id}`
+        : "https://user-management-app-backend-6.onrender.com/users";
       const options = {
         method: requestMethod,
         headers: {
